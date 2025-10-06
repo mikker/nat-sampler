@@ -8,7 +8,7 @@ npm install nat-sampler
 
 ## Usage
 
-``` js
+```js
 const NatSampler = require('nat-sampler')
 
 const s = new NatSampler()
@@ -51,10 +51,10 @@ How many samples the sampler is basing this on.
 
 The sampler applies some simple error correction to make sure bad samples do not mess it up.
 
-* If it has `<=` 3 samples, it will disregard none outliers.
-* If it has `<=` 7 samples, it will disregard one outliers.
-* If it has `<=` 11 samples, it will disregard two outliers.
-* If it has `>` 11 samples, it will disregard three outliers.
+- If it has `<=` 3 samples, it will disregard none outliers.
+- If it has `<=` 7 samples, it will disregard one outliers.
+- If it has `<=` 11 samples, it will disregard two outliers.
+- If it has `>` 11 samples, it will disregard three outliers.
 
 At max it keeps 16 samples of `{ host, port }` pairs for the analysis.
 
