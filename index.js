@@ -17,9 +17,7 @@ module.exports = class NatSampler {
 
     if (this._samples.length < 32) {
       this.size++
-      this._threshold =
-        this.size -
-        (this.size < 4 ? 0 : this.size < 8 ? 1 : this.size < 12 ? 2 : 3)
+      this._threshold = this.size - (this.size < 4 ? 0 : this.size < 8 ? 1 : this.size < 12 ? 2 : 3)
       this._samples.push(a, b)
       this._top += 2
     } else {
