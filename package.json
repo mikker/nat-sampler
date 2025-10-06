@@ -14,8 +14,7 @@
   },
   "scripts": {
     "format": "prettier --write .",
-    "lint": "prettier --check .",
-    "test": "tape test.js"
+    "test": "prettier --check . && tape test.js"
   },
   "author": "Mathias Buus (@mafintosh)",
   "license": "MIT",
