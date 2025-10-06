@@ -3,9 +3,9 @@
   "version": "1.0.1",
   "description": "Sample addresses to figure out if a host + port is consistent",
   "main": "index.js",
-  "dependencies": {},
   "devDependencies": {
-    "standard": "^16.0.3",
+    "prettier": "^3.6.2",
+    "prettier-config-holepunch": "^1.0.0",
     "tape": "^5.2.2"
   },
   "repository": {
@@ -13,7 +13,9 @@
     "url": "https://github.com/mafintosh/nat-sampler.git"
   },
   "scripts": {
-    "test": "standard && tape test.js"
+    "format": "prettier --write .",
+    "lint": "prettier --check .",
+    "test": "tape test.js"
   },
   "author": "Mathias Buus (@mafintosh)",
   "license": "MIT",
