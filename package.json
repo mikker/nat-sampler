@@ -4,9 +4,10 @@
   "description": "Sample addresses to figure out if a host + port is consistent",
   "main": "index.js",
   "devDependencies": {
+    "brittle": "^3.0.0",
+    "lunte": "^1.0.0",
     "prettier": "^3.6.2",
-    "prettier-config-holepunch": "^2.0.0",
-    "tape": "^5.2.2"
+    "prettier-config-holepunch": "^2.0.0"
   },
   "repository": {
     "type": "git",
@@ -14,7 +15,10 @@
   },
   "scripts": {
     "format": "prettier --write .",
-    "test": "prettier --check . && tape test.js"
+    "lint": "prettier --check . && lunte",
+    "test": "npm run test:node && npm run test:bare",
+    "test:node": "brittle-node test.js",
+    "test:bare": "brittle-bare test.js"
   },
   "author": "Mathias Buus (@mafintosh)",
   "license": "MIT",
